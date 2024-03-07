@@ -1,8 +1,31 @@
+function Quarter_Note () {
+    projectile = sprites.createProjectileFromSide(img`
+        . . . . . . . . f . . . . . . . 
+        . . . . . . . . f . . . . . . . 
+        . . . . . . . . f . . . . . . . 
+        . . . . . . . . f . . . . . . . 
+        . . . . . . . . f . . . . . . . 
+        . . . . . . . . f . . . . . . . 
+        . . . f f f f f f . . . . . . . 
+        . . f f f f f f f . . . . . . . 
+        . . f f f f f f f . . . . . . . 
+        . . f f f f f f f . . . . . . . 
+        . . f f f f f f f . . . . . . . 
+        . . f f f f f f f . . . . . . . 
+        . . . f f f f f . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, 50, 0)
+    projectile.y = 100
+    pause(500)
+}
 controller.A.onEvent(ControllerButtonEvent.Released, function () {
     if (mySprite.isHittingTile(CollisionDirection.Bottom)) {
         mySprite.vy = -50
     }
 })
+let projectile: Sprite = null
 let mySprite: Sprite = null
 mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 

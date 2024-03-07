@@ -2,7 +2,10 @@
     "name": "Music is the clue!",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "arcade-story": "github:microsoft/arcade-storytelling#v1.0.3",
+        "carnival": "github:microsoft/arcade-carnival#v0.0.7",
+        "arcade-character-animations": "github:microsoft/arcade-character-animations#v0.0.2"
     },
     "files": [
         "main.blocks",
@@ -10,7 +13,9 @@
         "README.md",
         "assets.json",
         "tilemap.g.jres",
-        "tilemap.g.ts"
+        "tilemap.g.ts",
+        "images.g.jres",
+        "images.g.ts"
     ],
     "testFiles": [
         "test.ts"
